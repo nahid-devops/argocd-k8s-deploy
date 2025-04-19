@@ -1,12 +1,12 @@
-apiVersion: v1
+version: v1
 kind: Service
 metadata:
   name: flask-node-port-svc
 spec:
-  type: NodePort
+  type: Nodeport
   selector:
-    app: flaskdemo
+    app: flask-demo
   ports:
   - port: 80
     targetPort: 5000
-    nodePort: 30007 
+    nodePort: 30007
